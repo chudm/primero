@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Tarea 11 mayo
+
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+  <h1>Tarea 11 mayo 2017</h1>
+    <br> <br> 
+<div id = "tablero">
+  <div class="row">
+ <div class="col-sm-12">
+ <audio id="normal" src="button-37.wav"></audio>
+
+  <audio id="audiobomba" src="Bomb.wav"></audio>
+
+  
+
+<img alt= "" src= "gris.jpg" id="cambia1" onclick="cambiar1(); sonido(); " />
+
+<img alt= "" src= "gris.jpg" id="cambiabomba" onclick="cambiar(); sonidob(); mostrarmodal();"  />
+
+<img alt= "" src= "gris.jpg" id="cambia2" onclick="cambiar2(); sonido();" />
+
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+<img alt= "" src= "gris.jpg" id="cambia3" onclick="cambiar3(); sonido();" />
+
+<img alt= "" src= "gris.jpg" id="cambia4" onclick="cambiar4(); sonido();" />
+
+<img alt= "" src= "gris.jpg" id="cambia5" onclick="cambiar5(); sonido();" />
+
+ 
+ <div id="myModal" class="modal">
+
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>TE JODISTE!!!!</p>
+   
+  </div>
+
+</div>
+
+
+<script language="javascript">
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+ function cambiar() {
+        document.getElementById("cambiabomba").src = "bomba.jpg";
+      
+}
+ 
+ function cambiar1() {
+
+  document.getElementById("cambia1").src = "imagen1.jpg";
+ }
+
+ function cambiar2() {
+
+  document.getElementById("cambia2").src = "imagen2.jpg";
+ }
+
+ function cambiar3() {
+
+  document.getElementById("cambia3").src = "imagen2.jpg";
+ }
+
+ function cambiar4() {
+
+  document.getElementById("cambia4").src = "imagen1.jpg";
+ }
+
+  function cambiar5() {
+
+  document.getElementById("cambia5").src = "imagen1.jpg";
+ }
+
+function sonido () {
+    document.getElementById('normal').play();
+}
+
+function sonidob () {
+    document.getElementById('audiobomba').play();
+}
+
+function mostrarmodal(){
+  document.getElementById('myModal').style.display='block';
+}
+
+
+ 
+</script>
+</div>
+</div>
+</body>
